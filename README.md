@@ -42,4 +42,28 @@ python main.py
 | **Move Down** | `S` | `J` |
 
 
+### Project Structure
+```text
+KiPong/
+├── design/
+│   ├── game_screen.kv
+│   ├── loading_screen.kv
+│   └── style.kv
+├── resources/
+│   ├── audio/        # Bounce and victory sounds
+│   ├── buttons/      # Custom UI sprites
+│   ├── fonts/        # Minecraft.ttf
+│   └── video/        # PongBg.mp4
+├── src/
+│   ├── main.py
+│   └── screens/
+│       └── game_screen.py
+└── requirements.txt
+```
+
+### Built With
+* [Python](https://www.python.org/)
+* [Kivy 2.3.1](https://kivy.org/)
+
+
 
