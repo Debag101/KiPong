@@ -1,0 +1,99 @@
+#:kivy 2.3.1
+
+#:set s dp(50)
+
+<ScoreLabel@Label>:
+    font_size : 64
+    size_hint_x : None
+    size_hint_y : None
+    size : self.texture_size
+
+<StatusMsg@Label>:
+    font_size : 85
+    size_hint : None, None
+    size : self.texture_size
+
+<ReloadButton@Button>:
+    background_normal : '../resources/buttons/reload.png'
+    background_down : '../resources/buttons/reload_down.png'
+    size_hint : None, None
+    
+<MenuButton@Button>:
+    background_normal : '../resources/buttons/menu.png'
+    background_down : '../resources/buttons/menu_down.png'
+    size_hint : None, None
+    
+<GameWindow>:
+    name: 'game_screen'
+    canvas.before:
+        Color:
+            rgba : root.left_panel_color
+        Rectangle:
+            pos : 0, 0 
+            size: root.width/2, root.height
+        
+        Color:
+            rgba : root.right_panel_color
+        Rectangle:
+            pos: root.width/2, 0
+            size: root.width/2, root.height
+
+    canvas:
+        Color:
+            rgba : 1,1,1,1
+        
+        Rectangle:
+            size: root.paddle_size
+            pos: root.left_paddle_pos
+
+        Rectangle:
+            size: root.paddle_size
+            pos: root.right_paddle_pos
+
+        Ellipse:
+            size: root.ball_size
+            pos: root.ball_pos
+            
+        Line:
+            points:[root.width/2, 0, root.width/2, root.height]
+            width : 1.4
+
+        Line:
+            width : 1.4
+            circle: (root.center_x, root.center_y, 100)
+
+    ScoreLabel:
+        text : root.left_player_score
+        font_name : '../resources/fonts/Minecraft.ttf'
+        center_x : root.width / 4
+        center_y : root.height * 2/4
+    
+    ScoreLabel:
+        text : root.right_player_score
+        font_name : '../resources/fonts/Minecraft.ttf'
+        center_x : root.width * 0.71
+        center_y : root.height * 2/4
+
+
+    StatusMsg:
+        font_name : '../resources/fonts/Minecraft.ttf'
+        text : root.left_msg
+        center : root.width/7, root.height * 3/4 
+    
+    StatusMsg:
+        font_name : '../resources/fonts/Minecraft.ttf'
+        text : root.right_msg
+        center : root.width * 2/3, root.height * 3/4
+
+    ScatterLayout:
+        ReloadButton:
+            pos : 0, root.height - s
+            size : s, s
+            opacity : root.opa
+            on_release : root.game_refresh()
+
+        MenuButton:
+            pos : s + dp(10), root.height - s
+            size : s, s
+            opacity : root.opa
+            on_release : root.manager.current = 'loading_screen'

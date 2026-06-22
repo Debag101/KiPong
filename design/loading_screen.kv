@@ -1,0 +1,57 @@
+#:kivy 2.3.1
+
+LoadingScreen:
+
+
+<LoadingScreen@Screen>:
+    name: 'loading_screen'
+    FloatLayout:
+        Video:
+            source: '../resources/video/PongBg.mp4'
+            state: 'play'
+            options : {'eos' : 'loop'}
+            allow_stretch : True
+            keep_ratio : False
+            size_hint : 1,1
+            pos_hint : {'center_x' : 0.5, 'center_y' : 0.5}
+
+        
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint : 0.4, 0.6
+            pos_hint : {'center_x' : 0.5, 'center_y' : 0.5}
+            spacing : 20
+
+
+            Label:
+                text : 'PONG'
+                font_name : '../resources/fonts/Minecraft.ttf'
+                font_size : 80
+                bold : True
+                size_hint_y : None
+                height : 120
+                pos_hint : {'center_x' : 0.5, 'center_y' : 0.9}
+                size : self.texture_size
+
+            # needed space
+            Widget:
+                size_hint_y: 0.2
+
+            Button:
+                text: 'New Game'
+                font_size: 24
+                font_name : '../resources/fonts/Minecraft.ttf'
+                size_hint_y: None
+                height: 60
+                background_color: 0.2, 0.7, 0.3, 1
+                on_release: root.manager.current = 'game_screen'
+
+            
+            Button:
+                text: 'Exit'
+                font_size: 24
+                font_name : '../resources/fonts/Minecraft.ttf'
+                size_hint_y: None
+                height: 60
+                background_color: 0.8, 0.2, 0.2, 1  
+                on_release: app.stop()
