@@ -11,6 +11,9 @@ The classic pong game made in python using the Kivy UI Library.
   
 ## Images
 ![Loading Screen](resources/screenshots/loading_screen.png)
+![Gameplay](resources/screenshots/gameplay.png)
+![Ending Screen](resources/screenshots/ending_screen.png)
+
 
 ## Getting Started
 ### Prerequisties 
