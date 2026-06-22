@@ -215,7 +215,7 @@ class GameWindow(Screen):
             self.right_panel_color = [0,1,0,0]
 
             self.left_msg = 'LOST'
-            self.right_msg = 'WIN'
+            self.right_msg = 'WON'
 
         self.victory_sound.play()
 
