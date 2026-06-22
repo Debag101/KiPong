@@ -8,6 +8,10 @@ The classic pong game made in python using the Kivy UI Library.
 - Audio: Tried adding impact audio using the `SoundLoader` module inbuilt in kivy.
 - Game Over Screen: Color coded overlays indicating WIN/LOSE status with Kivy `Animation`.
 
+  
+## Images
+![Loading Screen](resources/screenshots/loading_screen.png)
+
 ## Getting Started
 ### Prerequisties 
 Make sure you have python installed on your system (preferably Python 3.12+)
