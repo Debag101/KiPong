@@ -2,9 +2,9 @@
 KiPong is a simple recreation of the classic Pong Game made by Atari, Inc. in 1972. 
 
 ## Images
-![Loading Screen](../../KiPong/resources/screenshots/loading_screen.png)
-![Gameplay](../resources/screenshots/Gameplay.png)
-![Ending Screen](../resources/screenshots/ending_screen.png)
+![Loading Screen](resources/screenshots/loading_screen.png)
+![Gameplay](resources/screenshots/Gameplay.png)
+![Ending Screen](resources/screenshots/ending_screen.png)
 
 ## How to play the game
 
