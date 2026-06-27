@@ -37,6 +37,7 @@ KiPong is a simple recreation of the classic Pong Game made by Atari, Inc. in 19
 **Player 1 (Left)**
   - Up: W
   - Down: S
+
 **Player 2(Right)**
   - Up: I
   - Down: J
